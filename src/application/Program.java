@@ -1,4 +1,4 @@
-// COMPREENDE AS AULAS 121,122,123,124
+// COMPREENDE AS AULAS 121,122,123,124,125
 
 package application;
 
@@ -50,6 +50,15 @@ public class Program {
 		Account acc8 = new BusinessAccount(1007, "Chris", 1000.0, 500.0);
 		acc8.withdraw(200.0);
 		System.out.println("Chris' business account balance after withdraw: " + acc8.getBalance());
+		
+		Account x = new Account(1020, "John", 1000.0);
+		Account y = new SavingsAccount(1023, "Jane", 1000.0, 0.01);
+		
+		x.withdraw(50.0);
+		y.withdraw(50.0);
+		
+		System.out.println("Account " + x.getNumber() + " balance after withdraw of 50.0: " + x.getBalance());
+		System.out.println("Savings Account " + y.getNumber() + " balance after withdraw of 50.0: " + y.getBalance());
 	}
 	
 	
