@@ -1,3 +1,5 @@
+// COMPREENDE AS AULAS 121,122,123
+
 package application;
 
 import entities.Account;
@@ -34,5 +36,21 @@ public class Program {
 			acc5.updateBalance();
 			System.out.println("Update!");
 		}
+		
+		//SUPERPOSITION
+		
+		Account acc6 = new Account(1005, "Brian", 1000.0);
+		acc6.withdraw(200.0);
+		System.out.println("Brian's Balance: " + acc6.getBalance());
+		
+		Account acc7 = new SavingsAccount(1006, "Amanda", 1000.0, 0.01);
+		acc7.withdraw(200.0);
+		System.out.println("Amanda's Balance: " + acc7.getBalance());
+		
+		Account acc8 = new BusinessAccount(1007, "Chris", 1000.0, 500.0);
+		acc8.withdraw(200.0);
+		System.out.println("Chris' Balance: " + acc8.getBalance());
 	}
+	
+	
 }
